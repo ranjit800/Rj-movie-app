@@ -10,22 +10,22 @@ const SideNav = () => {
       </h1>
       <nav className="flex flex-col text-zinc-400 md:text-xl gap-2">
         <h1 className="text-white font-semibold mt-10 mb-3 md:text-xl text-xs">New Feeds</h1>
-        <Link className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
+        <Link to="/trending" className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
           <i className="ri-fire-fill"></i> Trending
         </Link>
-        <Link className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
+        <Link to="popular" className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
           {" "}
           <i className="ri-bard-fill"></i> Popular
         </Link>
-        <Link className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
+        <Link to='/movie' className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
           {" "}
           <i className="ri-movie-2-ai-fill"></i> Movies
         </Link>
-        <Link className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
+        <Link to='/tv' className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
           {" "}
           <i className="ri-slideshow-2-fill"></i> TV Show
         </Link>
-        <Link className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
+        <Link  to='/person' className="hover:bg-[#6556CD] hover:text-white p-3 rounded-lg duration-300">
           {" "}
           <i className="ri-user-5-fill"></i> People
         </Link>

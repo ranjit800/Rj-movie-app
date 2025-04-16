@@ -14,7 +14,7 @@ const TopNav = () => {
       const { data } = await axios.get(`/search/multi?query=${query}`);
 
       setsearches(data.results);
-      // console.log(data.results);
+      // console.log(data);
     } catch (error) {
       console.log("Error :", error);
     }
@@ -39,9 +39,10 @@ const TopNav = () => {
       </i>
     )}
 
-      <div className="absolute w-[45%] max-h-[50vh] bg-zinc-200  top-[85%] left-[10%] overflow-auto rounded">
+      <div className="absolute z-50   max-h-[50vh] bg-zinc-200 opacity-90 top-[85%] left-[10%] overflow-auto rounded-lg">
         {searches.map((s, index) => (
-          <Link
+          <Link 
+          to={`/${s.media_type}/details/${s.id}`}
             key={index}
             className="text-zinc-700 font-semibold hover:text-zinc-950 hover:bg-zinc-300 duration-300 w-[100%]  p-10 flex justify-start items-center border-b-2 border-zinc-100"
           >

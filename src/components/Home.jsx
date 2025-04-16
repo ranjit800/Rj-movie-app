@@ -5,6 +5,7 @@ import axios from "../utils/axios";
 import Heder from "./templates/Heder";
 import HorizontalCards from "./templates/HorizontalCards";
 import Dropwodn from "./templates/Dropwodn";
+import Loading from "./Loading";
 
 const Home = () => {
   document.title = "Movie | Home";
@@ -15,6 +16,7 @@ const Home = () => {
   const getHederWallpaper = async () => {
     try {
       const { data } = await axios.get(`/trending/all/day`);
+      // console.log(data)
       let randondata = data.results[(Math.random() * data.results.length).toFixed()];
       setwallpaper(randondata);
     } catch (error) {
@@ -38,8 +40,8 @@ const Home = () => {
     !wallpaper && getHederWallpaper();
   }, [category]);
 
-  console.log(Trending);
-  console.log(wallpaper);
+  // console.log(Trending);
+  // console.log(wallpaper);
 
   return wallpaper && Trending ? (
     <>
@@ -54,11 +56,11 @@ const Home = () => {
           options={["tv", "movie", "all", "person"]} 
           func={(e)=>setCategory(e.target.value)} />
         </div>
-        <HorizontalCards Cards={Trending} />
+        <HorizontalCards data={Trending} />
       </div>
     </>
   ) : (
-    <h1>Loding...</h1>
+   <Loading />
   );
 };
 
