@@ -64,7 +64,7 @@ const MovieDetails = () => {
 
         <div className="content ml-[5%]">
           <h1 className="text-5xl font-black text-white"> {info.detail.name || info.detail.original_name ||  info.detail.title || info.detail.original_title}</h1>
-          <span className="text-lg  text-white">{info.detail.release_date}</span>
+          <span className="text-lg  text-white">{info.detail.release_date.split("-")[0]}</span>
         </div>
       </div>
 
