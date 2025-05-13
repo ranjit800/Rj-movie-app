@@ -23,7 +23,7 @@ const Heder = ({ data }) => {
       <i className="ri-megaphone-fill text-yellow-500 "></i>{data.release_date || "No Information..."}
       <i className="ml-5 ri-album-fill text-yellow-500"></i>{data.media_type?.toUpperCase() || "N/A"}
       </p>
-      <Link className="p-3 rounded-lg mt-5 bg-[#6556CD] hover:bg-[#594cae] text-white font-thin">
+      <Link to={`/${data.media_type}/details/${data.id}/trailer`} className="p-3 rounded-lg mt-5 bg-[#6556CD] hover:bg-[#594cae] text-white font-thin">
       Watch Trailer
       </Link>
     </div>
